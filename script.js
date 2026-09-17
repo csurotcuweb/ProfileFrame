@@ -688,7 +688,7 @@ function drawPhoto() {
 
     const finalScale =
         scaleToCover *
-        zoom;
+        Math.max(1, zoom);
 
 
     const drawWidth =
