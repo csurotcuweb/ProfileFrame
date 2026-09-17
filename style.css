@@ -1,0 +1,1180 @@
+/* =========================================================
+   CSU ROTC PROFILE FRAME CHANGER
+   MODERN GOLD + MILITARY GREEN DESIGN
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    min-height: 100%;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #f4f4f4;
+
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            rgba(255, 204, 0, 0.14),
+            transparent 34%
+        ),
+
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(0, 75, 35, 0.18),
+            transparent 32%
+        ),
+
+        linear-gradient(
+            135deg,
+            #070a09,
+            #101513 50%,
+            #080b0a
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+
+    width: 100%;
+
+    padding:
+        28px
+        24px
+        24px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 204, 0, 0.12);
+
+    background:
+        rgba(7, 10, 9, 0.72);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.header-content {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 20px)
+        );
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand {
+    flex: 1;
+
+    text-align: center;
+}
+
+
+.brand-line {
+
+    margin-bottom: 5px;
+
+    color: #b9c0bb;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+h1 {
+
+    margin: 0;
+
+    color: #ffd000;
+
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            46px
+        );
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    text-shadow:
+        0 0 25px
+        rgba(255, 208, 0, 0.18);
+}
+
+
+.brand p {
+
+    margin:
+        9px
+        auto
+        0;
+
+    color: #89938d;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   HEADER LOGOS
+   ========================================================= */
+
+.header-logos {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    flex-shrink: 0;
+}
+
+
+.header-logos img {
+
+    display: block;
+
+    width: 54px;
+
+    height: 54px;
+
+    object-fit: contain;
+
+    padding: 5px;
+
+    border:
+        1px solid
+        rgba(255, 208, 0, 0.28);
+
+    border-radius: 10px;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
+}
+
+
+.header-logos img:hover {
+
+    transform:
+        translateY(-2px)
+        scale(1.04);
+
+    border-color:
+        rgba(255, 208, 0, 0.7);
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.app {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        34px
+        auto
+        45px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        350px;
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   PREVIEW
+   ========================================================= */
+
+.preview-section {
+
+    min-width: 0;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 13px;
+}
+
+
+.section-number {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #ffd000;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+    color: #f4f4f4;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+.section-heading p {
+
+    margin:
+        4px
+        0
+        0;
+
+    color: #77817b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   EDITOR CARD
+   ========================================================= */
+
+.editor-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 790px;
+
+    margin: 0 auto;
+
+    padding: 12px;
+
+    border:
+        1px solid
+        rgba(255, 208, 0, 0.42);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 208, 0, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.55),
+
+        0 0 45px
+        rgba(255, 208, 0, 0.04);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CANVAS
+   ========================================================= */
+
+#canvas {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 10px;
+
+    background: #000;
+
+    cursor: grab;
+
+    touch-action: none;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+}
+
+
+#canvas:active {
+
+    cursor: grabbing;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-state {
+
+    position: absolute;
+
+    inset: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    text-align: center;
+
+    background:
+        rgba(0, 0, 0, 0.42);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+}
+
+
+.upload-symbol {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 58px;
+
+    height: 58px;
+
+    border:
+        1px solid
+        rgba(255, 208, 0, 0.55);
+
+    border-radius: 50%;
+
+    color: #ffd000;
+
+    font-size: 34px;
+
+    background:
+        rgba(255, 208, 0, 0.06);
+}
+
+
+.empty-state strong {
+
+    font-size: 15px;
+}
+
+
+.empty-state span {
+
+    color: #89938d;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CANVAS HINT
+   ========================================================= */
+
+.canvas-hint {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px 22px;
+
+    margin-top: 10px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 9px;
+
+    color: #7d8781;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+
+.controls {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+
+    position: sticky;
+
+    top: 20px;
+}
+
+
+/* =========================================================
+   CONTROL CARD
+   ========================================================= */
+
+.control-card {
+
+    padding: 19px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.25);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.card-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+
+    color: #f4f4f4;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.step {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 27px;
+
+    height: 27px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: #171717;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffe000,
+            #e5a900
+        );
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 4px 15px
+        rgba(255, 208, 0, 0.2);
+}
+
+
+/* =========================================================
+   FILE INPUT
+   ========================================================= */
+
+#photoInput {
+
+    display: none;
+}
+
+
+/* =========================================================
+   UPLOAD BUTTON
+   ========================================================= */
+
+.upload-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    min-height: 47px;
+
+    border-radius: 10px;
+
+    color: #161616;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffdc00,
+            #edb500
+        );
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+
+.upload-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.05);
+
+    box-shadow:
+        0 9px 25px
+        rgba(255, 208, 0, 0.22);
+}
+
+
+.button-icon {
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FILE NAME
+   ========================================================= */
+
+.file-name {
+
+    margin:
+        9px
+        0
+        0;
+
+    min-height: 14px;
+
+    color: #737d77;
+
+    font-size: 9px;
+
+    text-align: center;
+
+    word-break: break-all;
+}
+
+
+/* =========================================================
+   SLIDER
+   ========================================================= */
+
+.slider-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: #909993;
+
+    font-size: 11px;
+}
+
+
+.slider-header strong {
+
+    color: #ffd000;
+
+    font-size: 11px;
+}
+
+
+#zoom {
+
+    width: 100%;
+
+    height: 5px;
+
+    appearance: none;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.17);
+
+    outline: none;
+
+    accent-color: #ffd000;
+}
+
+
+#zoom::-webkit-slider-thumb {
+
+    appearance: none;
+
+    width: 15px;
+
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #ffd000;
+
+    border:
+        2px solid
+        #151917;
+
+    cursor: pointer;
+}
+
+
+#zoom::-moz-range-thumb {
+
+    width: 15px;
+
+    height: 15px;
+
+    border-radius: 50%;
+
+    background: #ffd000;
+
+    border:
+        2px solid
+        #151917;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   POSITION
+   ========================================================= */
+
+.position-title {
+
+    margin:
+        18px
+        0
+        9px;
+
+    color: #7f8983;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.move-controls {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.middle-controls {
+
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.move-controls button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 43px;
+
+    height: 39px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 8px;
+
+    color: #e4e7e5;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    font-size: 16px;
+
+    transition:
+        .18s ease;
+}
+
+
+.move-controls button:hover {
+
+    color: #ffd000;
+
+    border-color:
+        rgba(255, 208, 0, 0.45);
+
+    background:
+        rgba(255, 208, 0, 0.08);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================================
+   ROTATE
+   ========================================================= */
+
+.rotate-controls {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 7px;
+
+    margin-top: 16px;
+}
+
+
+.rotate-controls button {
+
+    min-height: 39px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-radius: 8px;
+
+    color: #d7dcd9;
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition:
+        .18s ease;
+}
+
+
+.rotate-controls button:hover {
+
+    color: #ffd000;
+
+    border-color:
+        rgba(255, 208, 0, 0.4);
+
+    background:
+        rgba(255, 208, 0, 0.07);
+}
+
+
+/* =========================================================
+   SAVE CARD
+   ========================================================= */
+
+.save-card {
+
+    border-color:
+        rgba(255, 208, 0, 0.2);
+}
+
+
+.download-button {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    color: #151515;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffdc00,
+            #eeb500
+        );
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 208, 0, 0.14);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        filter .2s ease;
+}
+
+
+.download-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.05);
+
+    box-shadow:
+        0 12px 30px
+        rgba(255, 208, 0, 0.25);
+}
+
+
+.download-button:active {
+
+    transform:
+        translateY(0);
+}
+
+
+.save-note {
+
+    margin:
+        9px
+        0
+        0;
+
+    color: #707a74;
+
+    font-size: 9px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        0
+        auto
+        25px;
+
+    padding-top: 16px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #626c66;
+
+    font-size: 9px;
+
+    letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .app {
+
+        grid-template-columns: 1fr;
+
+        max-width: 760px;
+    }
+
+
+    .controls {
+
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .save-card {
+
+        grid-column:
+            1 / -1;
+    }
+
+
+    .editor-card {
+
+        max-width: 760px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+    .site-header {
+
+        padding:
+            18px
+            12px
+            20px;
+    }
+
+
+    .header-content {
+
+        flex-direction: column-reverse;
+
+        gap: 12px;
+    }
+
+
+    .header-logos {
+
+        justify-content: center;
+    }
+
+
+    .header-logos img {
+
+        width: 44px;
+
+        height: 44px;
+    }
+
+
+    .brand-line {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    h1 {
+
+        font-size: 29px;
+    }
+
+
+    .brand p {
+
+        font-size: 10px;
+    }
+
+
+    .app {
+
+        width:
+            calc(100% - 20px);
+
+        margin-top: 22px;
+
+        gap: 20px;
+    }
+
+
+    .controls {
+
+        display: flex;
+    }
+
+
+    .editor-card {
+
+        padding: 7px;
+
+        border-radius: 13px;
+    }
+
+
+    .canvas-hint {
+
+        font-size: 9px;
+
+        gap: 5px 12px;
+    }
+
+
+    footer {
+
+        width:
+            calc(100% - 20px);
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        CSU ROTC Profile Frame Changer
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         HEADER
+         ========================================= -->
+
+    <header class="site-header">
+
+        <div class="header-content">
+
+            <div class="brand">
+
+                <div class="brand-line">
+                    CARAGA STATE UNIVERSITY
+                </div>
+
+                <h1>
+                    Profile Frame Changer
+                </h1>
+
+                <p>
+                    Create your official CSU ROTC profile picture
+                    in just a few clicks.
+                </p>
+
+            </div>
+
+
+            <!-- WEBSITE LOGOS -->
+
+            <div class="header-logos">
+
+                <img
+                    src="CSU_Logo.png"
+                    alt="CSU Logo"
+                >
+
+                <img
+                    src="ROTC_Logo.jpg"
+                    alt="ROTC Logo"
+                >
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+         ========================================= -->
+
+    <main class="app">
+
+
+        <!-- =====================================
+             LEFT — PREVIEW
+             ===================================== -->
+
+        <section class="preview-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        PREVIEW
+                    </span>
+
+                    <h2>
+                        Your Profile Picture
+                    </h2>
+
+                    <p>
+                        Drag your photo to position it inside
+                        the ROTC frame.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="editor-card"
+                id="canvasWrap"
+            >
+
+                <canvas
+                    id="canvas"
+                    width="1024"
+                    height="1024"
+                ></canvas>
+
+
+                <div class="empty-state" id="emptyState" style="display: flex;">
+
+                    <div class="upload-symbol">
+                        +
+                    </div>
+
+                    <strong>
+                        Choose your profile photo
+                    </strong>
+
+                    <span>
+                        JPG, PNG or WebP
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="canvas-hint">
+
+                <span>
+                    🖱 Drag to position
+                </span>
+
+                <span>
+                    🔍 Mouse wheel to zoom
+                </span>
+
+                <span>
+                    📱 Touch supported
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             RIGHT — CONTROLS
+             ===================================== -->
+
+        <aside class="controls">
+
+
+            <!-- PHOTO -->
+
+            <div class="control-card">
+
+                <div class="card-title">
+
+                    <span class="step">
+                        1
+                    </span>
+
+                    <span>
+                        Profile Photo
+                    </span>
+
+                </div>
+
+
+                <label
+                    class="upload-button"
+                    for="photoInput"
+                >
+
+                    <span class="button-icon">
+                        📷
+                    </span>
+
+                    Choose Photo
+
+                </label>
+
+
+                <input
+                    id="photoInput"
+                    type="file"
+                    accept="image/*"
+                >
+
+
+                <p
+                    class="file-name"
+                    id="fileName"
+                >
+                    No photo selected
+                </p>
+
+            </div>
+
+
+
+            <!-- ADJUST -->
+
+            <div class="control-card">
+
+                <div class="card-title">
+
+                    <span class="step">
+                        2
+                    </span>
+
+                    <span>
+                        Adjust Photo
+                    </span>
+
+                </div>
+
+
+                <!-- ZOOM -->
+
+                <div class="slider-header">
+
+                    <span>
+                        Zoom
+                    </span>
+
+                    <strong id="zoomValue">
+                        100%
+                    </strong>
+
+                </div>
+
+
+                <input
+                    id="zoom"
+                    type="range"
+                    min="50"
+                    max="300"
+                    value="100"
+                >
+
+
+                <!-- POSITION -->
+
+                <div class="position-title">
+                    Position
+                </div>
+
+
+                <div class="move-controls">
+
+                    <button
+                        type="button"
+                        id="up"
+                    >
+                        ↑
+                    </button>
+
+
+                    <div class="middle-controls">
+
+                        <button
+                            type="button"
+                            id="left"
+                        >
+                            ←
+                        </button>
+
+                        <button
+                            type="button"
+                            id="reset"
+                        >
+                            ↻
+                        </button>
+
+                        <button
+                            type="button"
+                            id="right"
+                        >
+                            →
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="down"
+                    >
+                        ↓
+                    </button>
+
+                </div>
+
+
+                <!-- ROTATE -->
+
+                <div class="rotate-controls">
+
+                    <button
+                        type="button"
+                        id="rotateLeft"
+                    >
+                        ↶ Rotate Left
+                    </button>
+
+                    <button
+                        type="button"
+                        id="rotateRight"
+                    >
+                        Rotate Right ↷
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SAVE -->
+
+            <div class="control-card save-card">
+
+                <div class="card-title">
+
+                    <span class="step">
+                        3
+                    </span>
+
+                    <span>
+                        Save Your Profile Picture
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="downloadButton"
+                    class="download-button"
+                >
+
+                    ↓ Download Profile Picture
+
+                </button>
+
+
+                <p class="save-note">
+
+                    Your finished image will be
+                    saved as a PNG.
+
+                </p>
+
+            </div>
+
+
+        </aside>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer>
+
+        <span>
+            CSU • ROTC
+        </span>
+
+        <span>
+            Profile Frame Changer
+        </span>
+
+        <span>
+            © 2026
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
